@@ -2,7 +2,7 @@
 
 A modern, elegant habit tracker and mood journal built with Next.js 15, designed to help users build better habits and track their wellness journey.
 
-![Zennis Logo](public/images/zennis-logo-dark.png)
+![Zennis Logo](public/images/zennis-logo-light.png)
 
 ## 🌟 Features
 
@@ -205,7 +205,7 @@ If you find this project helpful, consider:
 
 ## 📞 Contact
 
-- **Email**: hello@zennis.app
+- **Email**: mehedipathantext@gmail.com
 - **Phone**: +1 (555) 123-4567
 - **Location**: San Francisco, CA
 - **Crisis Support**: Call 988 for mental health support
