@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Custom purple & green color palette for Zennis Habit Tracker */
+  --background: oklch(0.99 0.005 106);
+  --foreground: oklch(0.15 0.02 264);
+  --card: oklch(0.98 0.01 106);
+  --card-foreground: oklch(0.15 0.02 264);
+  --popover: oklch(0.98 0.01 106);
+  --popover-foreground: oklch(0.15 0.02 264);
+  --primary: oklch(0.65 0.25 264); /* Purple primary */
+  --primary-foreground: oklch(0.98 0.01 106);
+  --secondary: oklch(0.7 0.2 142); /* Green secondary */
+  --secondary-foreground: oklch(0.15 0.02 264);
+  --muted: oklch(0.95 0.01 106);
+  --muted-foreground: oklch(0.5 0.02 264);
+  --accent: oklch(0.75 0.18 142); /* Light green accent */
+  --accent-foreground: oklch(0.15 0.02 264);
+  --destructive: oklch(0.6 0.25 15);
+  --destructive-foreground: oklch(0.98 0.01 106);
+  --border: oklch(0.9 0.01 106);
+  --input: oklch(0.9 0.01 106);
+  --ring: oklch(0.65 0.25 264);
+  --chart-1: oklch(0.65 0.25 264);
+  --chart-2: oklch(0.7 0.2 142);
+  --chart-3: oklch(0.6 0.2 200);
+  --chart-4: oklch(0.75 0.18 142);
+  --chart-5: oklch(0.55 0.22 300);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.97 0.01 106);
+  --sidebar-foreground: oklch(0.15 0.02 264);
+  --sidebar-primary: oklch(0.65 0.25 264);
+  --sidebar-primary-foreground: oklch(0.98 0.01 106);
+  --sidebar-accent: oklch(0.95 0.01 106);
+  --sidebar-accent-foreground: oklch(0.15 0.02 264);
+  --sidebar-border: oklch(0.9 0.01 106);
+  --sidebar-ring: oklch(0.65 0.25 264);
+}
+
+.dark {
+  /* Dark mode with purple & green theme */
+  --background: oklch(0.08 0.02 264);
+  --foreground: oklch(0.95 0.01 106);
+  --card: oklch(0.1 0.02 264);
+  --card-foreground: oklch(0.95 0.01 106);
+  --popover: oklch(0.1 0.02 264);
+  --popover-foreground: oklch(0.95 0.01 106);
+  --primary: oklch(0.7 0.25 264); /* Brighter purple for dark mode */
+  --primary-foreground: oklch(0.08 0.02 264);
+  --secondary: oklch(0.6 0.2 142); /* Green secondary */
+  --secondary-foreground: oklch(0.95 0.01 106);
+  --muted: oklch(0.15 0.02 264);
+  --muted-foreground: oklch(0.6 0.01 106);
+  --accent: oklch(0.65 0.18 142); /* Green accent */
+  --accent-foreground: oklch(0.95 0.01 106);
+  --destructive: oklch(0.65 0.25 15);
+  --destructive-foreground: oklch(0.95 0.01 106);
+  --border: oklch(0.2 0.02 264);
+  --input: oklch(0.2 0.02 264);
+  --ring: oklch(0.7 0.25 264);
+  --chart-1: oklch(0.7 0.25 264);
+  --chart-2: oklch(0.6 0.2 142);
+  --chart-3: oklch(0.65 0.2 200);
+  --chart-4: oklch(0.65 0.18 142);
+  --chart-5: oklch(0.6 0.22 300);
+  --sidebar: oklch(0.12 0.02 264);
+  --sidebar-foreground: oklch(0.95 0.01 106);
+  --sidebar-primary: oklch(0.7 0.25 264);
+  --sidebar-primary-foreground: oklch(0.08 0.02 264);
+  --sidebar-accent: oklch(0.15 0.02 264);
+  --sidebar-accent-foreground: oklch(0.95 0.01 106);
+  --sidebar-border: oklch(0.2 0.02 264);
+  --sidebar-ring: oklch(0.7 0.25 264);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Custom animations for smooth interactions */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+
+  .animate-pulse-gentle {
+    animation: pulseGentle 2s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGentle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
