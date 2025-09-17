@@ -33,7 +33,7 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <div className="relative w-10 h-10 flex-shrink-0">
                 <Image
-                  src={theme === "dark" ? "/images/zennis-logo-light.png" : "/images/zennis-logo-light.png"}
+                  src={theme === "light" ? "/images/zennis-logo-light.png" : "/images/zennis-logo-dark.png"}
                   alt="Zennis Logo"
                   width={40}
                   height={40}
@@ -170,25 +170,40 @@ export function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t bg-muted/20">
-        <div className="container mx-auto px-4 py-4 sm:py-6">
-          <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center sm:space-y-0">
-            <div className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
-              © {currentYear} Zennis Habit Tracker. All rights reserved.
-            </div>
-            <div className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left order-last sm:order-none">
-              Developed with ❤️ by <span className="font-medium text-primary">Mehedi Pathan</span>
-            </div>
-            <div className="flex justify-center sm:justify-end space-x-4 text-xs sm:text-sm">
-              <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
+  <div className="container mx-auto px-4 py-4 sm:py-6">
+    <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-center sm:space-y-0">
+      <div className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
+        © {currentYear} Zennis Habit Tracker. All rights reserved.
       </div>
+      <div className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left order-last sm:order-none">
+        Design & Developed by{" "}
+        <a
+          href="https://mehedipathan.online"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-primary hover:underline"
+        >
+          Mehedi Pathan
+        </a>
+      </div>
+      <div className="flex justify-center sm:justify-end space-x-4 text-xs sm:text-sm">
+        <Link
+          href="/privacy"
+          className="text-muted-foreground hover:text-primary transition-colors"
+        >
+          Privacy Policy
+        </Link>
+        <Link
+          href="/terms"
+          className="text-muted-foreground hover:text-primary transition-colors"
+        >
+          Terms of Service
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
     </footer>
   )
 }

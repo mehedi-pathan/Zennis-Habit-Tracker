@@ -52,10 +52,10 @@ export default function AuthPage() {
   }, [isAuthenticated, isGuest, router])
 
   const logoSrc = mounted
-    ? resolvedTheme === "dark"
+    ? resolvedTheme === "light"
       ? "/images/zennis-logo-light.png"
-      : "/images/zennis-logo-light.png"
-    : "/images/zennis-logo-light.png"
+      : "/images/zennis-logo-dark.png"
+    : "/images/zennis-logo-dark.png"
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()

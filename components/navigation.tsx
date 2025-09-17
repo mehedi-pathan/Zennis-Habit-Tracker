@@ -48,7 +48,7 @@ export function Navigation() {
   }, [])
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: Event) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false)
       }
@@ -68,8 +68,8 @@ export function Navigation() {
   const logoSrc = mounted
     ? resolvedTheme === "dark"
       ? "/images/zennis-logo-light.png"
-      : "/images/zennis-logo-light.png"
-    : "/images/zennis-logo-light.png"
+      : "/images/zennis-logo-dark.png"
+    : "/images/zennis-logo-dark.png"
 
   return (
     <>
