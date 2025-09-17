@@ -23,8 +23,8 @@ export default function AuthLoading({ type, onComplete }: AuthLoadingProps) {
   const logoSrc = mounted
     ? resolvedTheme === "dark"
       ? "/images/zennis-logo-light.png"
-      : "/images/zennis-logo-dark.png"
-    : "/images/zennis-logo-dark.png"
+      : "/images/zennis-logo-light.png"
+    : "/images/zennis-logo-light.png"
 
   const steps =
     type === "signup"

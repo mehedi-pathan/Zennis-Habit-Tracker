@@ -15,10 +15,10 @@ const urlsToCache = [
 
 // Install event
 self.addEventListener("install", (event) => {
-  console.log("[v0] Service worker installing")
+  console.log("Service worker installing")
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log("[v0] Caching app shell")
+      console.log("Caching app shell")
       return cache.addAll(urlsToCache)
     }),
   )
@@ -36,13 +36,13 @@ self.addEventListener("fetch", (event) => {
 
 // Activate event
 self.addEventListener("activate", (event) => {
-  console.log("[v0] Service worker activating")
+  console.log("Service worker activating")
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            console.log("[v0] Deleting old cache:", cacheName)
+            console.log("Deleting old cache:", cacheName)
             return caches.delete(cacheName)
           }
         }),

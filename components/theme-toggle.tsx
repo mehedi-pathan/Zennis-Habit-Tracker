@@ -15,7 +15,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     if (mounted) {
-      console.log("[v0] Theme state:", { theme, resolvedTheme })
+      console.log("Theme state:", { theme, resolvedTheme })
     }
   }, [theme, resolvedTheme, mounted])
 
@@ -29,7 +29,7 @@ export function ThemeToggle() {
   }
 
   const handleThemeChange = (newTheme: string) => {
-    console.log("[v0] Changing theme to:", newTheme)
+    console.log("Changing theme to:", newTheme)
     setTheme(newTheme)
   }
 

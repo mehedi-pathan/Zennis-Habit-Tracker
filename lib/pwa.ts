@@ -6,13 +6,13 @@ export function registerServiceWorker() {
       navigator.serviceWorker
         .register("/sw.js")
         .then((registration) => {
-          console.log("[v0] SW registered: ", registration)
+          console.log("SW registered: ", registration)
           registration.addEventListener("updatefound", () => {
-            console.log("[v0] SW update found")
+            console.log("SW update found")
           })
         })
         .catch((registrationError) => {
-          console.log("[v0] SW registration failed: ", registrationError)
+          console.log("SW registration failed: ", registrationError)
         })
     })
   }
@@ -45,6 +45,6 @@ export function checkPWARequirements() {
     icons: true, // We'll assume icons are present since they're in manifest
   }
 
-  console.log("[v0] PWA Requirements:", requirements)
+  console.log("PWA Requirements:", requirements)
   return requirements
 }

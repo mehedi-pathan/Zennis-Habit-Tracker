@@ -19,8 +19,8 @@ export default function NotFound() {
   const logoSrc = mounted
     ? resolvedTheme === "dark"
       ? "/images/zennis-logo-light.png"
-      : "/images/zennis-logo-dark.png"
-    : "/images/zennis-logo-dark.png"
+      : "/images/zennis-logo-light.png"
+    : "/images/zennis-logo-light.png"
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-secondary/5 flex items-center justify-center">

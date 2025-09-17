@@ -68,8 +68,8 @@ export function Navigation() {
   const logoSrc = mounted
     ? resolvedTheme === "dark"
       ? "/images/zennis-logo-light.png"
-      : "/images/zennis-logo-dark.png"
-    : "/images/zennis-logo-dark.png"
+      : "/images/zennis-logo-light.png"
+    : "/images/zennis-logo-light.png"
 
   return (
     <>
@@ -109,7 +109,7 @@ export function Navigation() {
                   className="object-contain group-hover:scale-105 transition-transform"
                   priority
                   onError={(e) => {
-                    console.log("[v0] Logo failed to load:", logoSrc)
+                    console.log("Logo failed to load:", logoSrc)
                     // Fallback to text logo
                     e.currentTarget.style.display = "none"
                   }}

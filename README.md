@@ -88,7 +88,7 @@ zennis-habit-tracker/
 │   └── utils.ts                  # General utilities
 ├── public/                       # Static assets
 │   ├── images/                   # Image assets
-│   │   ├── zennis-logo-dark.png  # Dark theme logo
+│   │   ├── zennis-logo-light.png  # Dark theme logo
 │   │   ├── zennis-logo-light.png # Light theme logo
 │   │   ├── workout-1.jpeg        # Motivational images
 │   │   ├── workout-2.jpeg

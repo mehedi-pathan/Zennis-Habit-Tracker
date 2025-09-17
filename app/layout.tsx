@@ -38,23 +38,23 @@ function PWAInitializer() {
         navigator.serviceWorker
           .register("/sw.js")
           .then((registration) => {
-            console.log("[v0] SW registered successfully:", registration.scope)
+            console.log(" SW registered successfully:", registration.scope)
 
             // Check for updates
             registration.addEventListener("updatefound", () => {
-              console.log("[v0] SW update found")
+              console.log(" SW update found")
               const newWorker = registration.installing
               if (newWorker) {
                 newWorker.addEventListener("statechange", () => {
                   if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-                    console.log("[v0] New SW installed, refresh recommended")
+                    console.log(" New SW installed, refresh recommended")
                   }
                 })
               }
             })
           })
           .catch((error) => {
-            console.error("[v0] SW registration failed:", error)
+            console.error(" SW registration failed:", error)
           })
       })
     }
@@ -66,7 +66,7 @@ function PWAInitializer() {
         https: location.protocol === "https:" || location.hostname === "localhost",
         standalone: window.matchMedia("(display-mode: standalone)").matches,
       }
-      console.log("[v0] PWA Criteria:", criteria)
+      console.log(" PWA Criteria:", criteria)
     }
 
     // Run check after a short delay to ensure DOM is ready

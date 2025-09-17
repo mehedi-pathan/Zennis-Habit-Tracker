@@ -28,14 +28,14 @@ export function DesktopShortcut() {
     checkInstalled()
 
     const handler = (e: Event) => {
-      console.log("[v0] beforeinstallprompt event fired")
+      console.log("beforeinstallprompt event fired")
       e.preventDefault()
       setDeferredPrompt(e as BeforeInstallPromptEvent)
     }
 
     window.addEventListener("beforeinstallprompt", handler)
     window.addEventListener("appinstalled", () => {
-      console.log("[v0] App was installed")
+      console.log("App was installed")
       setIsInstalled(true)
       setDeferredPrompt(null)
     })
@@ -47,25 +47,25 @@ export function DesktopShortcut() {
   }, [])
 
   const handleInstall = async () => {
-    console.log("[v0] Install button clicked, deferredPrompt:", !!deferredPrompt)
+    console.log("Install button clicked, deferredPrompt:", !!deferredPrompt)
 
     if (isInstalled) {
-      console.log("[v0] App is already installed")
+      console.log("App is already installed")
       return
     }
 
     if (deferredPrompt) {
       try {
-        console.log("[v0] Showing install prompt")
+        console.log("Showing install prompt")
         await deferredPrompt.prompt()
         const { outcome } = await deferredPrompt.userChoice
-        console.log("[v0] User choice:", outcome)
+        console.log("User choice:", outcome)
 
         if (outcome === "accepted") {
           setDeferredPrompt(null)
         }
       } catch (error) {
-        console.error("[v0] Install prompt error:", error)
+        console.error("Install prompt error:", error)
       }
     } else {
       const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)

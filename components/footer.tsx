@@ -33,7 +33,7 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <div className="relative w-10 h-10 flex-shrink-0">
                 <Image
-                  src={theme === "dark" ? "/images/zennis-logo-light.png" : "/images/zennis-logo-dark.png"}
+                  src={theme === "dark" ? "/images/zennis-logo-light.png" : "/images/zennis-logo-light.png"}
                   alt="Zennis Logo"
                   width={40}
                   height={40}

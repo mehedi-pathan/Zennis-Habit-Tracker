@@ -46,7 +46,7 @@ export default function AuthPage() {
 
   useEffect(() => {
     if (isAuthenticated && !isGuest) {
-      console.log("[v0] User is already authenticated, redirecting to dashboard")
+      console.log("User is already authenticated, redirecting to dashboard")
       router.push("/dashboard")
     }
   }, [isAuthenticated, isGuest, router])
@@ -54,8 +54,8 @@ export default function AuthPage() {
   const logoSrc = mounted
     ? resolvedTheme === "dark"
       ? "/images/zennis-logo-light.png"
-      : "/images/zennis-logo-dark.png"
-    : "/images/zennis-logo-dark.png"
+      : "/images/zennis-logo-light.png"
+    : "/images/zennis-logo-light.png"
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
