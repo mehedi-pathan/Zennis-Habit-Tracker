@@ -2,7 +2,7 @@
 
 A modern, elegant habit tracker and mood journal built with Next.js 15, designed to help users build better habits and track their wellness journey.
 
-![Zennis Logo](public/images/zennis-logo-light.png)
+![Zennis Logo](public/images/zennis-logo-lights(notUsing).png)
 
 ## 🌟 Features
 
