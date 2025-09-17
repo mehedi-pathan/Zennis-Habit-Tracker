@@ -7,7 +7,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Mail, MapPin, Phone, Github, Twitter, Instagram, Coins } from "lucide-react"
+import { Mail, MapPin, Phone, Github, Instagram, Coins, Facebook } from "lucide-react"
 
 export function Footer() {
   const [email, setEmail] = useState("")
@@ -47,9 +47,10 @@ export function Footer() {
               time.
             </p>
             <div className="flex space-x-2">
+              {/* Social Media Buttons */}
               <Button variant="ghost" size="icon" className="w-8 h-8" asChild>
-                <a href="https://twitter.com/zennis" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="w-4 h-4" />
+                <a href="https://facebook.com/zennis" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="w-4 h-4" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="w-8 h-8" asChild>

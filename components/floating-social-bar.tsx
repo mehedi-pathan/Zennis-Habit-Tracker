@@ -1,45 +1,39 @@
 "use client"
 
-import { Github, Twitter, Instagram, Facebook, Youtube, Mail } from "lucide-react"
+import { Github, Instagram, Facebook, Youtube, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 const socialLinks = [
   {
-    icon: Twitter,
-    label: "Twitter",
-    href: "https://twitter.com/zennis",
-    color: "hover:text-blue-400",
-  },
-  {
     icon: Instagram,
     label: "Instagram",
     href: "https://instagram.com/zennis",
-    color: "hover:text-pink-400",
+    color: "hover:text-black-400",
   },
   {
     icon: Facebook,
     label: "Facebook",
     href: "https://facebook.com/zennis",
-    color: "hover:text-blue-600",
+    color: "hover:text-black-600",
   },
   {
     icon: Youtube,
     label: "YouTube",
     href: "https://youtube.com/zennis",
-    color: "hover:text-red-500",
+    color: "hover:text-black-500",
   },
   {
     icon: Github,
     label: "GitHub",
     href: "https://github.com/zennis",
-    color: "hover:text-gray-400",
+    color: "hover:text-black-400",
   },
   {
     icon: Mail,
     label: "Email",
     href: "mailto:hello@zennis.app",
-    color: "hover:text-green-400",
+    color: "hover:text-black-400",
   },
 ]
 
