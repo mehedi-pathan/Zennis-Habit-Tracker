@@ -6,6 +6,7 @@ A modern, elegant habit tracker and mood journal built with Next.js 15, designed
 
 ## 🌟 Features
 
+![Zennis Habit Tracker](zennis-habit-tracker-landing.png)
 - **Habit Tracking**: Create, manage, and track daily habits with streak counters
 - **Mood Journaling**: Record daily moods and reflections
 - **Analytics Dashboard**: Visualize progress with charts and insights
